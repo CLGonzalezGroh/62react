@@ -1,0 +1,9 @@
+.MovilContainer {
+  padding: 0 24px;
+  position: relative;
+  max-width: 412px;
+  height: 100vh;
+  max-height: 915px;
+  border-radius: 20px;
+  background: #f2f4f5;
+}
