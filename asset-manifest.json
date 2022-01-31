@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/62react/static/css/main.0dd2f7c0.css",
+    "main.js": "/62react/static/js/main.6e7c5521.js",
+    "index.html": "/62react/index.html",
+    "static/media/done_outline_black_24dp.svg": "/62react/static/media/done_outline_black_24dp.575cd54b924aa3dba94d3c6da4f4b791.svg",
+    "static/media/delete_black_24dp.svg": "/62react/static/media/delete_black_24dp.a53e22036f5f02bda3f291072d6c5f80.svg",
+    "main.0dd2f7c0.css.map": "/62react/static/css/main.0dd2f7c0.css.map",
+    "main.6e7c5521.js.map": "/62react/static/js/main.6e7c5521.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dd2f7c0.css",
+    "static/js/main.6e7c5521.js"
+  ]
+}
