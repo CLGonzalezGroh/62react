@@ -1,20 +1,15 @@
+import CheckIcon from "../ToDoIcon/CheckIcon"
+import DeleteIcon from "../ToDoIcon/DeleteIcon"
 import "./ToDoItem.css"
 
 const ToDoItem = ({ text, completed, toggleToDo, deleteToDo }) => {
   return (
     <li className="ToDoItem">
-      <span
-        className={`Icon Icon-check ${completed && "Icon-check--active"}`}
-        onClick={toggleToDo}
-      >
-        ✔
-      </span>
+      <CheckIcon completed={completed} onComplete={toggleToDo} />
       <p className={`ToDoItem-p ${completed && "ToDoItem-p--complete"}`}>
         {text}
       </p>
-      <span className={`Icon Icon-delete`} onClick={deleteToDo}>
-        X
-      </span>
+      <DeleteIcon onDelete={deleteToDo} />
     </li>
   )
 }

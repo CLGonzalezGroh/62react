@@ -30,8 +30,7 @@
 
 .ToDoItemLoading-delete {
   position: absolute;
-  top: -20px;
-  right: 0;
+  right: 6px;
 }
 
 .ToDoItemLoading,
