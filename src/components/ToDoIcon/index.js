@@ -1,5 +1,5 @@
 import "./ToDoIcon.css"
-import { ReactComponent as CheckSVG } from "./done_outline_black_24dp.svg"
+import { ReactComponent as CheckSVG } from "./done_black_24dp.svg"
 import { ReactComponent as DeleteSVG } from "./delete_black_24dp.svg"
 
 const iconTypes = {

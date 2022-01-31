@@ -5,8 +5,8 @@
   border-radius: 50%;
   cursor: pointer;
   font-size: 50px;
-  position: absolute;
-  bottom: 24px;
+  position: fixed;
+  bottom: 28px;
   right: 24px;
   font-weight: bold;
   color: #fafafa;

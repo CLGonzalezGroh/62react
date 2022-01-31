@@ -6,4 +6,5 @@
   max-height: 915px;
   border-radius: 20px;
   background: #f2f4f5;
+  overflow-y: auto;
 }

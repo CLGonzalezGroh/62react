@@ -3,3 +3,8 @@ ul {
   padding: 0 0 56px 0;
   list-style: none;
 }
+
+section {
+  max-height: calc(100vh - (154px + 70px + 24px));
+  overflow-y: auto;
+}
