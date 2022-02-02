@@ -1,10 +1,6 @@
-import { useContext } from "react"
-import { ToDoContext } from "../../context/ToDoContext"
 import "./CreateToDoButton.css"
 
-const CreateToDoButton = () => {
-  const { setShowToDoModal } = useContext(ToDoContext)
-
+const CreateToDoButton = ({ setShowToDoModal }) => {
   const addToDoButton = () => {
     setShowToDoModal((prevState) => !prevState)
   }

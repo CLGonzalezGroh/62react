@@ -1,7 +1,7 @@
 import "./ToDoEmpty.css"
 
 const ToDoEmpty = () => {
-  return <p>Ingresa una tarea</p>
+  return <p>Ingresa tu primer Tarea</p>
 }
 
 export default ToDoEmpty

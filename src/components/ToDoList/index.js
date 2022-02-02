@@ -1,9 +1,28 @@
 import "./ToDoList.css"
 
-const ToDoList = ({ children }) => {
+const ToDoList = ({
+  error,
+  loading,
+  totalToDos,
+  searchValue,
+  filteredToDos,
+  onError,
+  onLoading,
+  onEmptyToDo,
+  onEmptyToDoSearched,
+  render,
+  children,
+}) => {
+  const noToDos = !loading && !totalToDos
+  const noSearchedToDos = !loading && !!totalToDos && !filteredToDos.length
+  const renderFunc = children || render
   return (
-    <section>
-      <ul>{children}</ul>
+    <section className=".ToDoContainer">
+      {error && onError(error)}
+      {loading && onLoading()}
+      {noToDos && onEmptyToDo()}
+      {noSearchedToDos && onEmptyToDoSearched(searchValue)}
+      <ul>{!error && !loading && filteredToDos.map(renderFunc)}</ul>
     </section>
   )
 }

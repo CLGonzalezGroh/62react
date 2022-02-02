@@ -1,9 +1,7 @@
-import { useContext, useState } from "react"
-import { ToDoContext } from "../../context/ToDoContext"
+import { useState } from "react"
 import "./ToDoForm.css"
 
-const ToDoForm = () => {
-  const { addToDo, setShowToDoModal } = useContext(ToDoContext)
+const ToDoForm = ({ addToDo, setShowToDoModal }) => {
   const [newToDoValue, setNewToDoValue] = useState("")
 
   const onChange = (e) => {

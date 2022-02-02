@@ -1,16 +1,15 @@
-import { useState, createContext } from "react"
-import useLocalStorage from "../hooks/useLocalStorage"
+import { useState } from "react"
+import useLocalStorage from "./useLocalStorage"
 
 const KEY = "ToDos_V1"
 
-const ToDoContext = createContext()
-
-const ToDoProvider = ({ children }) => {
+const useToDo = () => {
   const {
     storageValue: toDos,
     saveValue: saveToDos,
     loading,
     error,
+    synchronize: synchronizeToDo,
   } = useLocalStorage(KEY, [])
 
   const [searchValue, setSearchValue] = useState("")
@@ -47,26 +46,21 @@ const ToDoProvider = ({ children }) => {
     saveToDos(newToDos)
   }
 
-  return (
-    <ToDoContext.Provider
-      value={{
-        loading,
-        error,
-        filteredToDos,
-        searchValue,
-        setSearchValue,
-        addToDo,
-        toggleToDo,
-        deleteToDo,
-        completedToDos,
-        totalToDos,
-        showToDoModal,
-        setShowToDoModal,
-      }}
-    >
-      {children}
-    </ToDoContext.Provider>
-  )
+  return {
+    loading,
+    error,
+    synchronizeToDo,
+    filteredToDos,
+    searchValue,
+    setSearchValue,
+    addToDo,
+    toggleToDo,
+    deleteToDo,
+    completedToDos,
+    totalToDos,
+    showToDoModal,
+    setShowToDoModal,
+  }
 }
 
-export { ToDoContext, ToDoProvider }
+export { useToDo }

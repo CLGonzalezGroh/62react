@@ -2,30 +2,37 @@ import { useState, useEffect } from "react"
 
 const useLocalStorage = (key, initialValue) => {
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(true)
+  const [error, setError] = useState(false)
+  const [synchronizedItem, SetSynchronizedItem] = useState(true)
 
   const [storageValue, setStorageValue] = useState(initialValue)
 
   useEffect(() => {
-    try {
-      setTimeout(() => {
+    setTimeout(() => {
+      try {
         const localStorageItem = JSON.parse(localStorage.getItem(key))
         if (localStorageItem) {
           setStorageValue(localStorageItem)
         }
         setLoading(false)
-      }, 1000)
-    } catch (error) {
-      setError(error.message)
-    }
-  }, [key])
+        SetSynchronizedItem(true)
+      } catch (error) {
+        setError(error.message)
+      }
+    }, 1000)
+  }, [synchronizedItem])
 
   const saveValue = (newValue) => {
     setStorageValue(newValue)
     localStorage.setItem(key, JSON.stringify(newValue))
   }
 
-  return { storageValue, saveValue, loading, error }
+  const synchronize = () => {
+    setLoading(true)
+    SetSynchronizedItem(false)
+  }
+
+  return { storageValue, saveValue, loading, error, synchronize }
 }
 
 export default useLocalStorage

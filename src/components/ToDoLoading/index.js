@@ -8,16 +8,6 @@ const ToDoLoading = () => {
         <p className="ToDoItemLoading-p"></p>
         <span className="ToDoItemLoading-delete"></span>
       </div>
-      <div className="ToDoItemLoading">
-        <span className="ToDoItemLoading-check"></span>
-        <p className="ToDoItemLoading-p"></p>
-        <span className="ToDoItemLoading-delete"></span>
-      </div>
-      <div className="ToDoItemLoading">
-        <span className="ToDoItemLoading-check"></span>
-        <p className="ToDoItemLoading-p"></p>
-        <span className="ToDoItemLoading-delete"></span>
-      </div>
     </>
   )
 }

@@ -1,9 +1,6 @@
-import { useContext } from "react"
-import { ToDoContext } from "../../context/ToDoContext"
 import "./ToDoSearch.css"
 
-const ToDoSearch = () => {
-  const { searchValue, setSearchValue } = useContext(ToDoContext)
+const ToDoSearch = ({ searchValue, setSearchValue, loading }) => {
   const onSearchChange = (e) => {
     setSearchValue(e.target.value)
   }
@@ -13,6 +10,7 @@ const ToDoSearch = () => {
       value={searchValue}
       className="ToDoSearch"
       placeholder="Buscar tareas ..."
+      disabled={loading}
     />
   )
 }
