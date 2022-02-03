@@ -12,7 +12,7 @@ import ToDoEmpty from "../ToDoEmpty"
 import ToDoEmptySearched from "../ToDoEmptySearched"
 import ToDoHeader from "../ToDoHeader"
 import { useToDo } from "./useToDo"
-import { ChangeAlertWithStorageListener } from "../ChangeAlert"
+import { ChangeAlert } from "../ChangeAlert"
 
 function App() {
   const {
@@ -64,7 +64,7 @@ function App() {
           <ToDoForm addToDo={addToDo} setShowToDoModal={setShowToDoModal} />
         </Modal>
       )}
-      <ChangeAlertWithStorageListener synchronizeToDo={synchronizeToDo} />
+      <ChangeAlert synchronizeToDo={synchronizeToDo} />
     </MovilContainer>
   )
 }

@@ -1,9 +1,10 @@
 import React from "react"
-import withStorageListener from "./withStorageListener"
+import useStorageListener from "./useStorageListener"
 import { Modal } from "../Modal"
 import "./ChangeAlert.css"
 
-const ChangeAlert = ({ show, toggleShow }) => {
+const ChangeAlert = ({ synchronizeToDo }) => {
+  const { show, toggleShow } = useStorageListener(synchronizeToDo)
   if (show) {
     return (
       <Modal>
@@ -20,6 +21,4 @@ const ChangeAlert = ({ show, toggleShow }) => {
   }
 }
 
-const ChangeAlertWithStorageListener = withStorageListener(ChangeAlert)
-
-export { ChangeAlertWithStorageListener }
+export { ChangeAlert }
